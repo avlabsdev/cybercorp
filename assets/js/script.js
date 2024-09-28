@@ -52,7 +52,6 @@ introSectionTemplate.innerHTML = `
                 display: flex;
                 justify-content: flex-start;
                 align-items: top;
-                height: 100vh;
                 background-color: #f1f1f1;
                 color: #000;
                 padding: 2rem;
