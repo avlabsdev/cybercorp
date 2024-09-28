@@ -1,7 +1,21 @@
+const template = document.createElement('template');
+template.innerHTML = `
+    <style>
+        h3 {
+            color: green;
+        }
+    </style>
+    <div class="todo-item">
+    <h3>
+        <slot></slot>
+    </h3>
+`;
+
 class TodoItem extends HTMLElement {
     constructor() {
         super();
-        this.innerHTML = `<h3>${this.innerText}</h3>`;
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
     }
 }
 
